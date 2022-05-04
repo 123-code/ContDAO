@@ -1,35 +1,27 @@
 import React from 'react';
-
-// falta todo el css. 
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
- 
-} from "react-router-dom";
+import { BrowserRouter as Router ,Route,Routes} from 'react-router-dom';
 import Main from './Pages/Main';
 import Gallery from './Pages/Gallery';
-import NotFound from './Pages/NotFound';
-import Connectbutton from './Components/Connectbutton';
+import Nav from './Components/Nav';
 
-export default class App extends React.Component {
-  render(){
+function App(){
     return(
-      
-      <Router>
-         <div className="App">
-
-        <Routes>
-          <Route  path='/' element={<Main/>}/>
-          <Route path='/gallery' element={<Gallery/>}/>
-          <Route path='*' element={<NotFound/>}/>
-        </Routes>
-        </div>
-        <div className="page-body">
-       
-        </div>
-      </Router>
-      
+      <>
+     <Main/>
+     <Gallery/>
+     <Nav/>
+     </>
+        
     )
-  }
 }
+export default App;
+
+
+/*
+<Router>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+        </Routes>
+      </Router>
+      </>
+*/
