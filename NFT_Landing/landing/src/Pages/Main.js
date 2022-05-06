@@ -12,12 +12,12 @@ const Main = ()=>{
  
 return(
 <>
-<body className="bg-lime-400">
+<body className="bg-gradient-to-t from-blue-400 to-emerald-400">
 
 <Connectbutton/>
 
 <div>
-    <h1> Reach us At: </h1>
+    <h1> Reach us At: </h1> 
     {botones()}
 </div>
 
@@ -39,7 +39,7 @@ items.map((item,index)=>{
     return(
         <ul>
         <div>
-        <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" key={index}>{item}</button> 
+        <button className = "content-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" key={index}>{item}</button> 
         </div>
         </ul>
         

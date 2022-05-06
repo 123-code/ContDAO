@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Nav = () => {
-    const items = ['Inicio','Galeria','Votar'];
+    const items = ['Inicio','Galeria','Votar',"Acerca de"];
+  
     return (
         
       items.map((item,index)=>{
           return(
               
-              <li key={index}>{item}</li>
-        
+              <li style={{display:"flex"}}key={index}>{item}</li>
           )
            
       })
