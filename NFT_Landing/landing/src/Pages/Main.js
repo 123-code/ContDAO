@@ -12,12 +12,12 @@ const Main = ()=>{
  let[icono,seticono] = useState(<AiFillFacebook/>);
  
 return(
-<>
+<div className="bg-gradient-to-t from-blue-400 to-emerald-400">
 <div classname = "font-mono">
 <Description/>
 </div>
 
-<div className="bg-gradient-to-t from-blue-400 to-emerald-400">
+<div >
 
 <Connectbutton/>
 
@@ -28,7 +28,7 @@ return(
 
 </div>
 
-</>
+</div>
 )
 } 
 export default Main;
@@ -66,7 +66,10 @@ const iconos = ()=>{
             icons.map((icon,index)=>{
                 return(
                     <>
+                    <div>
                     <div key={index}> {icon} </div>
+                    </div>
+                   
                     </>
                 )
 

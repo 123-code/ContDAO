@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import{ethers }from 'ethers';
+import {FaWallet} from 'react-icons/fa';
+
 
 const Connectbutton = ()=>{
     let [texto,settexto] = useState("Conectar Billetera");
@@ -9,6 +11,7 @@ const Connectbutton = ()=>{
 const conectar = async()=>{
     if(!window.ethereum){
         alert('No Web3 Detected');
+        console.info('No Web3 Detected');
         return;
     }
     else{
@@ -33,7 +36,7 @@ const conectar = async()=>{
 
 return(
     <>
-    <button className=  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={conectar}>{texto}</button>
+    <button className=  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={conectar}> <FaWallet/> {texto}</button>
     </>
 )
 }
