@@ -39,10 +39,10 @@ items.map((item,index)=>{
     return(
         <ul>
         <div>
-        <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" key={index}>{item}</button> 
+        <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded flex items-center" key={index}>{item}</button> 
         </div>
         </ul>
-        
+         
     )
 })
     )}
