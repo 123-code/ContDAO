@@ -30,7 +30,7 @@ const conectar = async()=>{
             console.info(`Conectada: ${address.toString()}`);
 
         
-           if(provider){setaddress(`Conectada: ${address.toString()}`);}
+           if(provider){setaddress(`Conectada: ${(await address).toString()}`);}
            else{setaddress("Conectar Billetera");}
             
        
@@ -44,14 +44,11 @@ const conectar = async()=>{
     }
 }
 
-useEffect = (()=>{})
+
 
 return(
     <>
-   
         <button className=  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={conectar}> <FaWallet/> {address}</button>
-       
-     
     </>
 )
 }  
