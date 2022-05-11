@@ -36,6 +36,7 @@ export default Main;
 // falta css aqui 
 const botones = ()=>{
     const items = ["Discord","Twitter","Instagram","Facebook","Github","OpenSea Collection"];
+    const links = ["https://twitter.com/dao_leaf1"]
     
 
     return(
