@@ -7,12 +7,9 @@ const Connectbutton = ()=>{
 
    
 
-    let [texto,settexto] = useState("Conectar Billetera");
-    let [address,setaddress] = useState("");
    
+    let [address,setaddress] = useState("Conectar Billetera");
    
-    
-
 const conectar = async()=>{
     if(!window.ethereum){
         alert('No Web3 Detected');
@@ -22,15 +19,24 @@ const conectar = async()=>{
     else{
         
         try{
+           
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
-            const address = signer.getAddress();
-            setaddress(address);
+             address = signer.getAddress();
+            //setaddress(address);
             await window.ethereum.request({method: 'eth_requestAccounts'});
-            console.info(`conectada:${(await address).toString()}`);
-
             
+            console.info(`conectada:${(await address).toString()}`);
+            console.info(`Conectada: ${address.toString()}`);
 
+        
+           if(provider){setaddress(`Conectada: ${address.toString()}`);}
+           else{setaddress("Conectar Billetera");}
+            
+       
+                //{provider ? `) : setaddress("Conectar Billetera")}
+            
+  
         } catch(err){
             console.info(err);
         }
@@ -38,17 +44,15 @@ const conectar = async()=>{
     }
 }
 
-useEffect( async()=>{
-    settexto(`Conectada: ${(await address).toString()}`);
-},[address]);
+useEffect = (()=>{})
 
 return(
     <>
    
-        <button className=  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={conectar}> <FaWallet/> {texto}</button>
+        <button className=  "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={conectar}> <FaWallet/> {address}</button>
        
      
     </>
 )
-}
+}  
 export default Connectbutton;

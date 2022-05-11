@@ -6,6 +6,7 @@ import {AiFillInstagram} from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai';
 import {BsTwitter} from 'react-icons/bs';
 import Description from '../Components/Description';
+import Footer from '../Components/Footer';
 
 // ">
 const Main = ()=>{
@@ -40,12 +41,12 @@ const botones = ()=>{
     
 
     return(
-items.map((item,index)=>{
+items.map((item,index,links)=>{
     /// corregir.
     return(
         <ul>
         <div className = "whitespace-pre">
-        <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded gap-y-4 " key={index}>{item}</button> 
+        <button onClick={links} className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded gap-y-4 " key={index}>{item}</button> 
         </div>
 
         <button> </button>
@@ -55,7 +56,8 @@ items.map((item,index)=>{
          
     )
 })
-    )}
+
+ )}
 
     // bugs aqui. 
 const iconos = ()=>{
