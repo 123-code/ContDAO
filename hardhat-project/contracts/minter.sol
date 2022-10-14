@@ -22,6 +22,8 @@ function startpresale()public onlyOwner{
 
 
 function presalemint() public payable{
+    require(presalestarted==true,"presale not ongoing");
+    _safemint
 
 }
 

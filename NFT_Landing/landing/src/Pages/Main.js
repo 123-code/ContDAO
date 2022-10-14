@@ -32,7 +32,7 @@ const connectwallet = async () => {
     const provider = await Web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
-    
+    // change network to mainnet before deploy 
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 5) {
       window.alert("Change the network to goerli");
