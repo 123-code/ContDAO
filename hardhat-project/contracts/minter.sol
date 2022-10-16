@@ -5,6 +5,7 @@ contract minter is ERC721,Ownable{
     string public baseuri;
     bool public presalestarted = false;
     uint256 public maxpresalecap = 0;
+    uint256 public tokenids;
 
 
     constructor(string memory _baseuri)ERC721("ECTOKEN","EC"){
@@ -23,12 +24,10 @@ function startpresale()public onlyOwner{
 
 function presalemint() public payable{
     require(presalestarted==true,"presale not ongoing");
-    _safemint
+    _safemint(msg.sender,tokenids);
+    tokenids += 1;
 
 }
 
 
-
-
-    }
 
