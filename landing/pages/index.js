@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
    <>
-   <h1> ContrubutDAO </h1> 
+   <h1> ContDAO </h1> 
     <ConnectButton/>
     <p> The Social Project Contribution DAO </p>
     <button> Explore Projects </button>
