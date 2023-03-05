@@ -1,0 +1,14 @@
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-item label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .Font {
+    font-family: 'futura', sans-serif;
+  }
